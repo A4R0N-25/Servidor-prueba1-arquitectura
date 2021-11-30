@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://arquitectura.espe.edu.ec/servidor/prueba"
+           targetNamespace="http://arquitectura.espe.edu.ec/servidor/prueba" elementFormDefault="qualified">
+
+    <xs:element name="partidosDisponiblesRequest">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="partidosDisponiblesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="partidoRS" minOccurs="0" maxOccurs="unbounded" type="tns:partidoRS"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="localidadDisponibleRequest">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="localidadDisponibleResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="localidadRS" minOccurs="0" maxOccurs="unbounded" type="tns:localidadRS"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="comprarBoletoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="codPartido" type="xs:integer"/>
+                <xs:element name="codLocalidad" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="comprarBoletoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="estado" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="partidoRS">
+        <xs:sequence>
+            <xs:element name="codigo" type="xs:integer"/>
+            <xs:element name="equipoLocal" type="xs:string"/>
+            <xs:element name="equipoVisita" type="xs:string"/>
+            <xs:element name="fecha" type="xs:date"/>
+            <xs:element name="lugar" type="xs:string"/>
+            <xs:element name="localidad" minOccurs="0" maxOccurs="unbounded" type="tns:localidad"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="localidad">
+        <xs:sequence>
+            <xs:element name="codigoLocalidad" type="xs:string"/>
+            <xs:element name="disponibilidad" type="xs:integer"/>
+            <xs:element name="precio" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="localidadRS">
+        <xs:sequence>
+            <xs:element name="codigoLocalidad" type="xs:string"/>
+            <xs:element name="disponibilidad" type="xs:integer"/>
+            <xs:element name="precio" type="xs:decimal"/>
+            <xs:element name="partido" type="tns:partido"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="partido">
+        <xs:sequence>
+            <xs:element name="codigo" type="xs:integer"/>
+            <xs:element name="equipoLocal" type="xs:string"/>
+            <xs:element name="equipoVisita" type="xs:string"/>
+            <xs:element name="fecha" type="xs:date"/>
+            <xs:element name="lugar" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

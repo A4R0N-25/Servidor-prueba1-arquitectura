@@ -74,8 +74,11 @@
 				</executions>
 				<configuration>
 					<sources>
-						<source>${project.basedir}/src/main/resources/prueba.xsd</source>
+						<source>${project.basedir}/src/main/resources/partido.xsd</source>
 					</sources>
+					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+					<clearOutputDir>false</clearOutputDir>
+					<skipXjc>true</skipXjc>
 				</configuration>
 			</plugin>
 		</plugins>
