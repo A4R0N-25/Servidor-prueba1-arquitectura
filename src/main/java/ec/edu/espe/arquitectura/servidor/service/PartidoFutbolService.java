@@ -37,7 +37,7 @@ public class PartidoFutbolService {
             partidoRS.setCodigo(BigInteger.valueOf(partidoFutbol.getCodigo()));
             partidoRS.setEquipoLocal(partidoFutbol.getEquipoLocal());
             partidoRS.setEquipoVisita(partidoFutbol.getEquipoVisita());
-            partidoRS.setFecha(DatatypeFactory.newInstance().newXMLGregorianCalendar(partidoFutbol.getFecha()));
+            partidoRS.setFecha(DatatypeFactory.newInstance().newXMLGregorianCalendar(partidoFutbol.getFecha().toString()));
             partidoRS.setLugar(partidoFutbol.getLugar());
             List<Localidad> localidades = transformLocalidadPartido(partidoFutbol.getLocalidad());
             for(Localidad localidad : localidades){
@@ -60,7 +60,7 @@ public class PartidoFutbolService {
             partido.setCodigo(BigInteger.valueOf(localidadPartido.getPartido().getCodigo()));
             partido.setEquipoLocal(localidadPartido.getPartido().getEquipoLocal());
             partido.setEquipoVisita(localidadPartido.getPartido().getEquipoVisita());
-            partido.setFecha(DatatypeFactory.newInstance().newXMLGregorianCalendar(localidadPartido.getPartido().getFecha()));
+            partido.setFecha(DatatypeFactory.newInstance().newXMLGregorianCalendar(localidadPartido.getPartido().getFecha().toString()));
             partido.setLugar(localidadPartido.getPartido().getLugar());
             LocalidadRS localidadRS = new LocalidadRS();
             localidadRS.setCodigoLocalidad(localidadPartido.getCodigoLocalidad());

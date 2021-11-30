@@ -3,6 +3,7 @@ package ec.edu.espe.arquitectura.servidor.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -23,7 +24,7 @@ public class PartidoFutbol {
     private String equipoVisita;
 
     @Column(name = "fecha", nullable = false)
-    private String fecha;
+    private Date fecha;
 
     @Column(name = "lugar", nullable = false)
     private String lugar;

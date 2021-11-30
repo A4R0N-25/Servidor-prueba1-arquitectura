@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2021.11.29 a las 08:49:25 PM COT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://arquitectura.espe.edu.ec/servidor/prueba">
+    <schemaBindings map="false">
+      <package name="ec.edu.espe.arquitectura.servidor.prueba"/>
+    </schemaBindings>
+    <bindings scd="tns:partidosDisponiblesRequest">
+      <class ref="ec.edu.espe.arquitectura.servidor.prueba.PartidosDisponiblesRequest"/>
+    </bindings>
+    <bindings scd="tns:partidosDisponiblesResponse">
+      <class ref="ec.edu.espe.arquitectura.servidor.prueba.PartidosDisponiblesResponse"/>
+    </bindings>
+    <bindings scd="~tns:partidoRS">
+      <class ref="ec.edu.espe.arquitectura.servidor.prueba.PartidoRS"/>
+    </bindings>
+    <bindings scd="tns:localidadDisponibleRequest">
+      <class ref="ec.edu.espe.arquitectura.servidor.prueba.LocalidadDisponibleRequest"/>
+    </bindings>
+    <bindings scd="tns:localidadDisponibleResponse">
+      <class ref="ec.edu.espe.arquitectura.servidor.prueba.LocalidadDisponibleResponse"/>
+    </bindings>
+    <bindings scd="~tns:localidadRS">
+      <class ref="ec.edu.espe.arquitectura.servidor.prueba.LocalidadRS"/>
+    </bindings>
+    <bindings scd="~tns:localidad">
+      <class ref="ec.edu.espe.arquitectura.servidor.prueba.Localidad"/>
+    </bindings>
+    <bindings scd="~tns:partido">
+      <class ref="ec.edu.espe.arquitectura.servidor.prueba.Partido"/>
+    </bindings>
+  </bindings>
+</bindings>
+
