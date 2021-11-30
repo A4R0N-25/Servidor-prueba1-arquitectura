@@ -44,7 +44,7 @@ public class PartidoFutbolController {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "comprarBoletoRequest")
     @ResponsePayload
-    public ComprarBoletoResponse partidosDisponibles(@RequestPayload ComprarBoletoRequest request) throws Exception {
+    public ComprarBoletoResponse comprarBoleto(@RequestPayload ComprarBoletoRequest request) throws Exception {
         ComprarBoletoResponse response = new ComprarBoletoResponse();
         try {
             this.partidoFutbolService.comprarBoleto(request.getCodPartido().intValue(),request.getCodLocalidad());
